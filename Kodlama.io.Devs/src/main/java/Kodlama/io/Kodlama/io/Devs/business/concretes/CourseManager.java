@@ -18,7 +18,7 @@ public class CourseManager implements CourseService {
         for(int i=0;i<courses1.size();i++){
             if(courses1.get(i).getCourseName().equals(course.getCourseName())){
                 return true;
-            }
+            }if(course1.getName().isEmpty()) throw new Exception("The course name can not be empty");
         }
 
         return false;
